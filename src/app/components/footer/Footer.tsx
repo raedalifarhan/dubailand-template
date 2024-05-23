@@ -7,7 +7,7 @@ import { AiFillInstagram, AiFillTwitterCircle, AiFillYoutube } from 'react-icons
 
 const Footer = () => {
   return (
-    <div className='bg-slate-700 text-slate-200 text-sm mt-16 rounded-md'>
+    <div className='bg-slate-700 text-slate-200 text-sm mt-5 rounded-md'>
       <Container>
         <div className='flex flex-col md:flex-row justify-between pt-16 pb-8'>
           <FooterList>

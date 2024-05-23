@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { GrLanguage } from 'react-icons/gr';
+import Logo from '../Logo';
 
 const Navbar = () => {
     const [activeLink, setActiveLink] = useState('الصفحة الرئيسية');
@@ -12,14 +13,7 @@ const Navbar = () => {
 
     return (
         <header className="flex flex-col gap-3 my-5">
-            <div className="flex justify-between flex-wrap">
-                <a href="#">
-                    <img src="images/logo-land_department.svg" width="200" alt="dubai gov" />
-                </a>
-                <a href="#">
-                    <img src="images/logo-GovDubaiLogoNew.png" width="200" alt="internal portal" />
-                </a>
-            </div>
+            <Logo /> 
 
             <nav className="flex flex-wrap items-center justify-between rounded-md text-lg py-5 text-slate-50 border-2 px-2 bg-slate-800">
                 <div className="w-full md:w-auto">
@@ -44,7 +38,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
-                                 href={`/orders`}
+                                 href={`/form`}
                                 className={`p-3 rounded-md font-semibold ${activeLink === 'المركبات' ? 'text-yellow-700' : 'hover:text-yellow-500 hover:font-semibold'}`}
                                 onClick={() => handleLinkClick('المركبات')}
                             >

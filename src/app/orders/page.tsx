@@ -107,8 +107,8 @@ export default function OrdersPage() {
     },
   ];
 
-  const [selectedCategory, setSelectedCategory] = useState<OrderCategory | null>(null);
-  const [filteredOrders, setFilteredOrders] = useState<Order[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<OrderCategory | null>(orderCategories[0]);
+  const [filteredOrders, setFilteredOrders] = useState<Order[]>(orders.filter((order) => order.category.id === orderCategories[0].id));
 
   const handleCategoryClick = (category: OrderCategory) => {
     setSelectedCategory(category);
