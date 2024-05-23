@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Cairo } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/nav/Navbar";
+import Footer from "./components/footer/Footer";
+import Container from "./components/Container";
 
-const inter = Inter({ subsets: ["latin"] });
+const cairo = Cairo({ subsets: ["latin", "arabic"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +18,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ar" dir="rtl" >
+      <body className={`${cairo.className} font-cairo`}>
+        <div className="min-h-screen">
+          <Container>
+            <div className="flex flex-col gap-5 shadow p-5">
+              <Navbar />
+              <main className="flex-grow">
+                {children}
+              </main>
+              <Footer />
+            </div>
+          </Container>
+        </div>
+      </body>
     </html>
   );
 }
