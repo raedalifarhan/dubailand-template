@@ -47,7 +47,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
-                                 href={`/orders`}
+                                 href={`/allFormsPage`}
                                 className={`p-3 rounded-md font-semibold ${activeLink === 'المواقف' ? 'text-yellow-700' : 'hover:text-yellow-500 hover:font-semibold'}`}
                                 onClick={() => handleLinkClick('المواقف')}
                             >
